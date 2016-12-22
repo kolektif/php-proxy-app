@@ -38,10 +38,22 @@ if(Config::get('url_mode') == 2){
 // very important!!! otherwise requests are queued while waiting for session file to be unlocked
 session_write_close();
 
+$urlList = json_decode(file_get_contents('url_list.json'), true);
+
 // form submit in progress...
-if(isset($_POST['url'])){
+if(isset($_POST['url']) || isset($_GET['url'])){
 	
-	$url = $_POST['url'];
+	$url = $_POST['url'] ?? $_GET['url'];
+
+	$parsedUrl = parse_url($url);
+	if(isset($parsedUrl['host'])){
+	    $host = $parsedUrl['host'];
+    }elseif(isset($parsedUrl['path'])){
+	    $host = $parsedUrl['path'];
+    }
+    if(!in_array($host, array_keys($urlList))){
+        die('ops');
+    }
 	$url = add_http($url);
 	
 	header("HTTP/1.1 302 Found");
