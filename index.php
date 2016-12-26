@@ -52,7 +52,8 @@ if(isset($_POST['url']) || isset($_GET['url'])){
 	    $host = $parsedUrl['path'];
     }
     if(!in_array($host, array_keys($urlList))){
-        die('ops');
+	echo 'Bu proxy sunucusu yalnizca belirli sitelerde calismaktadir. Listeyi gormek ve guncellemek icin <a href="https://github.com/kolektif/sansur-listesi/blob/master/liste.json">tiklayin.</a>';
+        die;
     }
 	$url = add_http($url);
 	
