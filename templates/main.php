@@ -51,7 +51,7 @@ html body {
 <div id="container">
 
 	<div style="text-align:center;">
-		<h1 style="color:blue;">PHP-Proxy</h1>
+		<h1 style="color:blue;">Sansür Savan Proxy Sunucusu</h1>
 	</div>
 	
 	<?php if(isset($error_msg)){ ?>
@@ -76,7 +76,20 @@ html body {
 		</script>
 		
 	<!-- [END] -->
-	
+
+    <br/>
+    SansürSavan, kolektif biçimde geliştirilen bir internet sitesi / tarayıcı eklentisidir. <br/>
+    Proxy sitemiz ile, Türkiye'de sansürlenen internet sitelerine erişebilirsiniz. <br/>
+    Daha iyi bir deneyim için tarayıcı eklentimiz ile kullanmanız tavsiye edilir. <br/>
+
+    <strong>Detaylar:</strong> <a href="https://sansursavan.org">https://sansursavan.org</a><br>
+    <strong>Tarayıcı(Chrome) Eklentisi: </strong> <a href="https://chrome.google.com/webstore/detail/sans%C3%BCrsavan/iadmdopibichlaibpedpolfemeapmhdn">https://chrome.google.com/webstore/detail/sans%C3%BCrsavan/iadmdopibichlaibpedpolfemeapmhdn</a><br>
+    <strong>Sansürlü Siteler Listesi: </strong> <a href="https://github.com/kolektif/sansur-listesi/blob/master/liste.json">https://github.com/kolektif/sansur-listesi/blob/master/liste.json</a>
+    <br>
+    <br>
+    Not: Bu proxy sunucusu, yalnızca sansürlenen ve sansürsavan listesine kayıt edilen internet sitelerinde çalışır.
+    Eğer sansürlü bir siteye proxy sunucumuz üzerinden erişmek istiyorsanız bizimle bir şekilde iletişime geçebilirsiniz.
+
 	</div>
 	
 </div>

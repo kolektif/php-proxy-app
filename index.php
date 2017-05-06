@@ -51,8 +51,8 @@ if(isset($_POST['url']) || isset($_GET['url'])){
     }elseif(isset($parsedUrl['path'])){
 	    $host = $parsedUrl['path'];
     }
-    if(!in_array($host, array_keys($urlList))){
-	echo 'Bu proxy sunucusu yalnizca belirli sitelerde calismaktadir. Listeyi gormek ve guncellemek icin <a href="https://github.com/kolektif/sansur-listesi/blob/master/liste.json">tiklayin.</a>';
+    if(!in_array($host, array_keys($urlList), true)){
+		echo 'Bu proxy sunucusu, yalnızca sansürlenen ve sansürsavan listesine kayıt edilen internet sitelerinde çalışır.  Listeyi gormek ve guncellemek icin <a href="https://github.com/kolektif/sansur-listesi/blob/master/liste.json">tiklayin.</a>';
         die;
     }
 	$url = add_http($url);
